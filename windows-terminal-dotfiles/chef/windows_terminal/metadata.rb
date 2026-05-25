@@ -1,0 +1,7 @@
+name 'windows_terminal'
+maintainer 'Your Name'
+maintainer_email 'you@example.com'
+license 'All Rights Reserved'
+description 'Installs/Configures Windows Terminal settings'
+version '0.1.0'
+chef_version '>= 16.0'

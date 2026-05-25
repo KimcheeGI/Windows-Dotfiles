@@ -1,0 +1,11 @@
+---
+- name: Ensure Windows Terminal LocalState directory exists
+  ansible.windows.win_file:
+    path: '{{ ansible_env.LOCALAPPDATA }}\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState'
+    state: directory
+
+- name: Deploy Windows Terminal settings
+  ansible.windows.win_copy:
+    src: '{{ role_path }}\\files\\settings.json'
+    dest: '{{ ansible_env.LOCALAPPDATA }}\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json'
+    force: yes
